@@ -1,0 +1,20 @@
+{
+	"name": "mywebclass-logging",
+	"version": "0.0.0",
+	"description": "logging system",
+	"main": "./lib/mwc-logging",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mywebclass/logging.git",
+		"keywords": [
+			"logging",
+			"mywebclass"
+		],
+		"dependencies": {
+			"winston": ">= 0.7.x"
+		},
+		"engines": {
+			"node": ">= 0.10.x"
+		}
+	}
+}
