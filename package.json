@@ -2,19 +2,26 @@
 	"name": "mywebclass-logging",
 	"version": "0.0.0",
 	"description": "logging system",
-	"main": "./lib/mwc-logging",
+	"main": "index",
+	"scripts": {
+		"test": 
+	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mywebclass/logging.git",
-		"keywords": [
+		"url": "https://github.com/mywebclass/logging.git"
+	},
+	"keywords": [
 			"logging",
 			"mywebclass"
-		],
-		"dependencies": {
+	],
+	"dependencies": {
 			"winston": ">= 0.7.x"
-		},
-		"engines": {
-			"node": ">= 0.10.x"
-		}
+	},
+	"devDependencies": {
+		"mocha": "*",
+		"should": "*"
+	},
+	"engines": {
+		"node": ">= 0.10.x"
 	}
 }
