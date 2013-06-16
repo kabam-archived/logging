@@ -15,7 +15,8 @@
 		"mywebclass"
 	],
 	"dependencies": {
-			"winston": ">= 0.7.x"
+			"winston": ">= 0.7.x",
+			"winston-mongodb": ">= 0.4.x"
 	},
 	"devDependencies": {
 		"mocha": ">= 1.11.x",
