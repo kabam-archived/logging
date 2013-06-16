@@ -20,7 +20,8 @@
 	},
 	"devDependencies": {
 		"mocha": ">= 1.11.x",
-		"should": ">= 1.2.x"
+		"should": ">= 1.2.x",
+		"mongodb": "*"
 	},
 	"engines": {
 		"node": ">= 0.10.x"
