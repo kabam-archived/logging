@@ -18,8 +18,8 @@
 			"winston": ">= 0.7.x"
 	},
 	"devDependencies": {
-		"mocha": "*",
-		"should": "*"
+		"mocha": ">= 1.11.x",
+		"should": ">= 1.2.x"
 	},
 	"engines": {
 		"node": ">= 0.10.x"
