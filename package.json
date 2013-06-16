@@ -2,9 +2,9 @@
 	"name": "mywebclass-logging",
 	"version": "0.0.0",
 	"description": "logging system",
-	"main": "index",
+	"main": "./lib/mwc-logging",
 	"scripts": {
-		"test": "./node_modules/mocha/bin/mocha test/unit-test/"
+		"test": "./node_modules/mocha/bin/mocha test/unit-test/ test/acceptance-test/"
 	},
 	"repository": {
 		"type": "git",
