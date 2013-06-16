@@ -1,6 +1,4 @@
-var
-	mocha = require('mocha'),
-	should = require('should');
+var should = require('should');
 
 describe('Load module', function () {
 	it('should loaded the module', function () {
