@@ -4,15 +4,15 @@
 	"description": "logging system",
 	"main": "index",
 	"scripts": {
-		"test": 
+		"test": "./node_modules/mocha/bin/mocha test/unit-test/"
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/mywebclass/logging.git"
 	},
 	"keywords": [
-			"logging",
-			"mywebclass"
+		"logging",
+		"mywebclass"
 	],
 	"dependencies": {
 			"winston": ">= 0.7.x"
