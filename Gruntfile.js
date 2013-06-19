@@ -30,5 +30,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-mocha-cli');
   grunt.loadNpmTasks('grunt-bg-shell');
 
-  grunt.registerTask('test', ['jshint', 'bgShell:dropDatabase', 'mochacli', 'bgShell:dropDatabase']);
+  grunt.registerTask('test', ['jshint', 'bgShell:dropDatabase', 'mochacli']);
 };
