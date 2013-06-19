@@ -1,29 +1,31 @@
 {
-	"name": "mywebclass-logging",
-	"version": "0.0.0",
-	"description": "logging system",
-	"main": "./lib/mwc-logging",
-	"scripts": {
-		"test": "./node_modules/mocha/bin/mocha test/unit-test/ test/acceptance-test/"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mywebclass/logging.git"
-	},
-	"keywords": [
-		"logging",
-		"mywebclass"
-	],
-	"dependencies": {
-			"winston": ">= 0.7.x",
-			"winston-mongodb": ">= 0.4.x"
-	},
-	"devDependencies": {
-		"mocha": ">= 1.11.x",
-		"should": ">= 1.2.x",
-		"mongodb": "*"
-	},
-	"engines": {
-		"node": ">= 0.10.x"
-	}
+  "name": "mywebclass-logging",
+  "version": "0.0.0",
+  "description": "logging system",
+  "main": "./lib/mwc-logging",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mywebclass/logging.git"
+  },
+  "keywords": [
+    "logging",
+    "mywebclass"
+  ],
+  "dependencies": {
+    "winston": ">= 0.7.x",
+    "winston-mongodb": ">= 0.4.x"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-mocha-cli": "~1.0.6",
+    "mocha": ">= 1.11.x",
+    "should": ">= 1.2.x",
+    "mongodb": "*"
+  },
+  "engines": {
+    "node": ">= 0.10.x"
+  }
 }
