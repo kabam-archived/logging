@@ -1,6 +1,13 @@
 module.exports = function (grunt) {
 
   grunt.initConfig({
+    jshint: {
+      all: [
+      'Gruntfile.js',
+      'lib/**/*.js',
+      'test/**/*.js'
+      ]
+    },
     bgShell: {
       dropDatabase: {
         cmd: 'mongo mwc_logs_test --eval "db.dropDatabase()"',
@@ -19,8 +26,9 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-mocha-cli');
   grunt.loadNpmTasks('grunt-bg-shell');
 
-  grunt.registerTask('test', [ 'bgShell:dropDatabase', 'mochacli', 'bgShell:dropDatabase']);
+  grunt.registerTask('test', ['jshint', 'bgShell:dropDatabase', 'mochacli', 'bgShell:dropDatabase']);
 };

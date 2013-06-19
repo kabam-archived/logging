@@ -17,8 +17,8 @@ describe('Load the module', function () {
 			logging.should.have.property('info');
 			logging.should.have.property('warn');
 			logging.should.have.property('error');
-		})
-	})
+		});
+	});
 });
 
 // describe('Scenario 1: Error log should be recorded to `mwc-log` database', function () {
