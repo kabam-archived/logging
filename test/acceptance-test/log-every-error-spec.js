@@ -3,25 +3,6 @@ var
 	MongoClient = require('mongodb').MongoClient,
 	Server = require('mongodb').Server;
 
-// Setup test database
-var
-	mongoClient = new MongoClient(new Server('localhost', 27017)),
-	logsDb = {};
-
-	before(function () {
-		it('should be connected', function (done) {
-			mongoClient.open(function(err, mongoClient) {
-				logsDb = mongoClient.db('mwc-logs');
-				logsDb.serverConfig.connected.should.be.ok;
-				logsDb.collection('log', function (err, openedCollection) {
-					openedCollection.remove(function() {
-						done();
-					});
-				});
-			});
-		});
-});
-
 describe('Load the module', function () {
 	describe('#error()', function () {
 		it('should have an error method', function () {
@@ -42,8 +23,3 @@ describe('Load the module', function () {
 
 // describe('Scenario 1: Error log should be recorded to `mwc-log` database', function () {
 // });
-
-after(function () {
-	// close db connection
-	logsDb.close();
-});
