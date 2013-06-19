@@ -20,27 +20,27 @@ describe('Load the module', function () {
 	});
 });
 
-describe('Scenario 1: Error log should be recorded to `mwc_logs_test` database',
-	function () {
-		describe('Log error', function () {
-			logger.error('Hello Error!');
+// Scenario 1
+describe('Error log should be recorded', function () {
+	describe('Log error', function () {
+		logger.error('Hello Error!');
 
-			it('should log error to DB', function (done) {
+		it('should log error to DB', function (done) {
 				// Connect to the db
 				MongoClient.connect('mongodb://localhost:27017/mwc_logs_test',
-				function(err, db) {
-					if(!err) {
-						console.log('We are connected');
-						db.collection('log', function (err, openedCollection) {
-							openedCollection.find().toArray(function (err, items) {
-								items.should.have.length(1);
-								items.should.be.an.instanceOf(Array);
-								items[0].level.should.equal('error');
-								done();
+					function(err, db) {
+						if(!err) {
+							console.log('We are connected');
+							db.collection('log', function (err, openedCollection) {
+								openedCollection.find().toArray(function (err, items) {
+									items.should.have.length(1);
+									items.should.be.an.instanceOf(Array);
+									items[0].level.should.equal('error');
+									done();
+								});
 							});
-						});
-					}
-				});
+						}
+					});
 			});
-		});
 	});
+});
