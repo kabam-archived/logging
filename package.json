@@ -29,6 +29,7 @@
     "install": "~0.1.7",
     "grunt-contrib-jshint": "~0.6.0"
   },
+  "license": "MIT",
   "engines": {
     "node": ">= 0.10.x"
   }
